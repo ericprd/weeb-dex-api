@@ -3,20 +3,20 @@ package models
 import "time"
 
 type AttributesStruct struct {
-	Title struct { En string } `json:"attributes.title"`
-	AltTitles []struct { En string } `json:"attributes.altTitles"`
-	Description struct { En string } `json:"attributes.description"`
-	OriginalLanguage string `json:"attributes.originalLanguage"`
-	Status string `json:"attributes.status"`
+	Title struct { En string } `json:"title"`
+	AltTitles []struct { En string } `json:"altTitles"`
+	Description struct { En string } `json:"description"`
+	OriginalLanguage string `json:"originalLanguage"`
+	Status string `json:"status"`
 	Tags []struct {
-		Type string `json:"attributes.tags.type"`
+		Type string `json:"type"`
 		Attributes struct {
-			Name struct { En string } `json:"attributes.tags.attributes.name"`
-			Group string `json:"attributes.tags.attributes.Group"`
-		} `json:"attributes.tags.attributes"`
+			Name struct { En string } `json:"name"`
+			Group string `json:"Group"`
+		} `json:"attributes"`
 	}
-	UpdatedAt time.Time `json:"attributes.updatedAt"`
-	LatestUploadedChapter string `json:"attributes.latestUploadedChapter"`
+	UpdatedAt time.Time `json:"updatedAt"`
+	LatestUploadedChapter string `json:"latestUploadedChapter"`
 }
 
 type MangaDataStruct struct {
